@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: airflow-config
+data:
+  AIRFLOW__CORE__FERNET_KEY: {{ .Values.config.AIRFLOW__CORE__FERNET_KEY | quote }}
+  AIRFLOW__CORE__EXECUTOR: {{ .Values.config.AIRFLOW__CORE__EXECUTOR | quote }}
+  AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: {{ .Values.config.AIRFLOW__DATABASE__SQL_ALCHEMY_CONN | quote }}
+  AIRFLOW__CELERY__RESULT_BACKEND: {{ .Values.config.AIRFLOW__CELERY__RESULT_BACKEND | quote }}
