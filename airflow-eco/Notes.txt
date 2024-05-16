@@ -1,6 +1,0 @@
-
-1. Get the Airflow web URL by running these commands:
-  export POD_NAME=$(kubectl get pods --namespace default -l "app=airflow-web" -o jsonpath="{.items[0].metadata.name}")
-  echo Visit Airflow web at: http://127.0.0.1:8080
-  kubectl port-forward  8080:8080
-
