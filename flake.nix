@@ -22,7 +22,11 @@
                 minikube
                 kubectl
                 terraform
+                python310
               ];
+              shellHook = ''
+                zsh
+              '';
           };
         });
 }
